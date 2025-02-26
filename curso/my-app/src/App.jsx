@@ -5,25 +5,34 @@ import Header from './components/Header'
 import Banner from './components/Banner'
 import Container from './components/Container'
 import Card from './components/Card'
-import videos from "./json/db.json"
+import Category, { categories, filterCategory } from './components/Category'
+
+
 
 function App() {
 
   return (
     <>
       <Header/>
-      <Banner image='home'/> 
+      <Banner image='favoritos'/> 
       <Container>
-           
-        <h2 className='flex justify-center font-bold'> Geografia </h2>
 
-        <section className='flex gap-1 flex-wrap justify-center'>
-          {
-            videos.map((video)=>{
-              return <Card id={video.id} key={video.id}/>
-            })
-          }
-        </section>
+
+       {
+        categories.map((category, index)=>{
+          return(
+            <Category category={category} key={index}>
+              {
+                filterCategory(index).map((video)=>{
+                  return <Card id={video.id} key={video.id}/>
+                })
+              }
+            </Category>
+          )
+        })
+      }  
+
+
         
       </Container>
       <Footer/>
