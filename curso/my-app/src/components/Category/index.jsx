@@ -18,7 +18,7 @@ export function filterCategory(id){
 function Category({category, children}){
     return(
         <section className='my-4'>
-            <h2 className='flex justify-center font-bold text-2xl'> {category} </h2>
+            <h2 className='flex justify-center font-bold text-2xl py-4'> {category} </h2>
 
             <div className='flex gap-1 flex-wrap justify-center'>
                 {children}
