@@ -14,7 +14,7 @@ function VideoList({videos, emptyHeading}) {
   return (
     <>
         <h2 className='text-center'> {heading} </h2>
-        <section className='flex justify-center flex-wrap gap-[5px] '>
+        <section className='flex justify-center flex-wrap gap-[5px] mt-[8px] '>
             {videos.map((video)=>(
                 <Card id={video.id} key={video.id}/>
             ))}
