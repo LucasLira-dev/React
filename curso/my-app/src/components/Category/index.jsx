@@ -1,15 +1,15 @@
 import '../../App.css';
 import videos from '../../json/videos.json'
 
-export const categories=[
+const categories=[
     "Geografia",
     "Como fazer e usar",
     "Astronomia e Geografia",
     "Climatologia, Meteorologia, Vegetação",
     "Geologia e Hidrografia"
-  ]
+  ] 
   
-export function filterCategory(id){
+function filterCategory(id){
     return videos.filter((video)=>{
       return video.category === categories[id]
     })
@@ -17,14 +17,15 @@ export function filterCategory(id){
 
 function Category({category, children}){
     return(
-        <section className='my-4'>
-            <h2 className='flex justify-center font-bold text-2xl py-4'> {category} </h2>
+        <section className=' flex flex-col min-w-[1200px] min-h-[280px] mx-auto'>
+            <h2 className=' py-4 flex justify-center font-bold text-2xl mb-4'> {category} </h2>
 
-            <div className='flex gap-1 flex-wrap justify-center'>
+            <div className='flex gap-1 float-start items-center m-4 p-4 w-[100%] h-[150px]'>
                 {children}
             </div>
         </section>
     )
 }
 
+export { categories, filterCategory };
 export default Category;

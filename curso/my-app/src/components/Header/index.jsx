@@ -5,7 +5,7 @@ import '../../App.css';
 
 function Header(){
     return (
-        <header className="bg-black border-b-2 border-red-600 flex justify-around items-center  w-full fixed h-16 left-0 ">
+        <header className="bg-black border-b-2 border-red-600 flex justify-around items-center  w-full fixed h-16 left-0 z-50 ">
            <Link to="/">   
                  <span  className="text-4xl font-bold text-red-700"> LucasFlix</span>
            </Link> 
