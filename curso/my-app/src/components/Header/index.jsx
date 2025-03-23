@@ -12,8 +12,10 @@ function Header(){
          
            <nav>
                 <Link to="/" className='text-white no-underline px-2 text-2xl'>Home </Link>
-                <Link to="/watch" className='text-white no-underline px-2 text-2xl'> Assistir </Link>
+            
                 <Link to="/search" className='text-white no-underline px-2 text-2xl'> Buscar </Link>
+
+                <Link to="/favorites" className='text-white no-underline px-2 text-2xl'> Favoritos </Link>
            </nav>
         </header>
 
